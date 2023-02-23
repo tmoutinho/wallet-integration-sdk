@@ -10,7 +10,8 @@ export default function Document() {
 
         <script
           dangerouslySetInnerHTML={{
-            __html: `
+            __html:
+              `
             !(function (t, e) {
               var o, n, p, r;
               e.__SV ||
@@ -57,7 +58,9 @@ export default function Document() {
                 }),
                 (e.__SV = 1));
             })(document, window.frame || []);
-            frame.init("16OG2oVu4GYg8CjfOQKHl_O7htLut7avxzjNbfLWyuc", {
+            frame.init("` +
+              process.env.NEXT_PUBLIC_FRAME_ID +
+              `", {
               api_host: "https://analytics.dev-conductive.ai",
               debug: true,
             });
